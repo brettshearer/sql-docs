@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID of the object of which this column is part.|  
 |**stats_id**|**int**|ID of the statistics of which this column is part.<br /><br />If statistics correspond to an index, the *stats_id* value is the same as the *index_id* value in the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view.|  
-|**stats_column_id**|**int**|1-based ordinal within set of stats columns.|  
+|**stats_column_id**|**int**|1-based ordinal within set of stats columns. Note: This is NOT the order of the columns within the statistics. It cannot be used to identify what column's data is stored in the related histogram.|  
 |**column_id**|**int**|ID of the column from **sys.columns**.|  
   
 ## Permissions  
